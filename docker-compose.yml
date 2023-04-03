@@ -1,0 +1,22 @@
+version: '3'
+services:
+  tarin:
+    image: firdos2345/bank
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+
+  movie:
+    image: firdos2345/loan
+    ports:
+      - "8002:80"
+    deploy:
+      replicas: 3
+      
+  recharge:
+    image: firdos2345/dth
+    ports:
+      - "8003:80"
+    deploy:
+      replicas: 3
